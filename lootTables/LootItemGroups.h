@@ -366,6 +366,19 @@
 2, rhs_30Rnd_545x39_7U1_AK //subsonic
 1, rhs_20rnd_9x39mm_SP5 //asval
 
+//40mm flares
+2, rhs_VG40OP_white
+2, rhs_VG40OP_green
+2, rhs_VG40OP_red
+
+//40mm smoke
+1, rhs_GRD40_White
+1, rhs_GRD40_Green
+1, rhs_GRD40_Red
+1, rhs_VG40MD_White
+1, rhs_VG40MD_Green
+1, rhs_VG40MD_Red
+
 >AttachmentsAFRF
 
 4, rhs_bipod
@@ -482,14 +495,18 @@
 15, rhs_weap_svdp_wd
 13, rhs_weap_svdp_wd_npz
 10, rhs_weap_t5000
+10, rhs_weap_vss
 
 > SniperAmmoAFRF
 75, rhs_10Rnd_762x54mmR_7N1
 25, rhs_5Rnd_338lapua_t5000
+15, rhs_10rnd_9x39mm_SP5
+10, rhs_10rnd_9x39mm_SP6
 
 > SniperAttachmentsAFRF
 85, rhs_acc_pso1m2
 15, rhs_acc_dh520x56
+15, rhs_acc_pso1m21
 
 
 > SniperAmmo
@@ -582,6 +599,7 @@
 17, bipod_01_F_blk
 17, bipod_01_F_khk
 
+/*
 > HEGrenades
 67, 1Rnd_HE_Grenade_shell
 33, 3Rnd_HE_Grenade_shell
@@ -614,10 +632,16 @@
 4, 3Rnd_SmokePurple_Grenade_shell
 4, 3Rnd_SmokeRed_Grenade_shell
 4, 3Rnd_SmokeYellow_Grenade_shell
+*/
 
 > HandGrenades
-50, HandGrenade
-50, rhs_mag_f1	//GREF
+10, rhs_mag_rgd5
+10, rhs_mag_rgn
+10, rhs_mag_rgo
+10, rhs_mag_m67
+10, rhs_mag_m69
+10, rhs_mag_mk84
+10, rhs_mag_f1	//GREF
 
 > Flares
 33, rhs_mag_nspn_green
@@ -759,7 +783,7 @@
 11, B_Bergen_rgr
 11, B_Bergen_blk
 11, B_FieldPack_ghex_F 
-4, B_ViperHarness_base_F         
+/*4, B_ViperHarness_base_F         
 4, B_ViperHarness_blk_F          
 4, B_ViperHarness_ghex_F         
 4, B_ViperHarness_hex_F          
@@ -771,7 +795,7 @@
 6, B_ViperLightHarness_hex_F     
 6, B_ViperLightHarness_khk_F     
 6, B_ViperLightHarness_oli_F    
-
+*/
 > GuerillaVests
 7, V_BandollierB_khk
 7, V_BandollierB_cbr
@@ -1364,8 +1388,8 @@
 5, rhs_weap_m4a1_grip
 5, rhs_weap_m4a1_grip2
 2, rhs_weap_m4a1_m203
-2, rhs_weap_m4a1_m203s
-2 rhs_weap_m4a1_m320
+1, rhs_weap_m4a1_m203s
+1 rhs_weap_m4a1_m320
 2, rhs_weap_m4a1_blockII
 1, rhs_weap_m4a1_blockII_grip2
 1, rhs_weap_m4a1_blockII_grip_wd
@@ -1390,26 +1414,40 @@
 50, rhs_mag_30Rnd_556x45_Mk318_Stanag
 50, rhs_mag_30Rnd_556x45_Mk262_Stanag
 
+//40mm flares
+10, rhs_mag_M585_white
+10, rhs_mag_m661_green
+10, rhs_mag_m662_red
+
+//40 mm smoke
+10, rhs_mag_m713_Red
+10, rhs_mag_m714_White
+10, rhs_mag_m715_Green
+
 >AttachmentsUSAF
 10, rhsusf_acc_harris_bipod
+10, rhsusf_acc_M952V
+6, rhsusf_acc_wmx
 1, rhsusf_acc_anpeq15A
 1, rhsusf_acc_anpeq15
 1, rhsusf_acc_anpeq15_light
 1, rhsusf_acc_M2010S
 1, rhsusf_acc_anpeq15side
 1, rhsusf_acc_SR25S
-1, rhsusf_acc_rotex5_grey
-1, rhsusf_acc_rotex5_tan
-1, rhsusf_acc_nt4_black
-1, rhsusf_acc_nt4_tan
+1, rhsusf_acc_rotex5_grey	//suppressor
+1, rhsusf_acc_rotex5_tan	//suppressor
+1, rhsusf_acc_nt4_black	//suppressor
+1, rhsusf_acc_nt4_tan //suppressor
 1, rhsusf_acc_muzzleFlash_SF
 1, rhsusf_acc_SF3P556
 1, rhsusf_acc_SFMB556
 10, rhsusf_acc_compm4
-8, rhsusf_acc_eotech_552
+4, rhsusf_acc_eotech_552
 2, rhsusf_acc_LEUPOLDMK4
 1, rhsusf_acc_M2A1
 5, rhsusf_acc_EOTECH
+8, rhsusf_acc_eotech_xps3
+4, rhsusf_acc_elcan_3d
 1, rhsusf_acc_LEUPOLDMK4_2
 2, rhsusf_acc_ACOG3_USMC
 1, rhsusf_acc_ACOG2_USMC
@@ -1419,6 +1457,10 @@
 1, rhsusf_acc_ACOG_sa
 1, rhsusf_acc_ACOG_d
 1, rhsusf_acc_ACOG_wd
+2, rhsusf_acc_ACOG_MDO
+2, rhsusf_acc_SpecterDR_D
+2, rhsusf_acc_SpecterDR_A_3d
+2, rhsusf_acc_ARDEC_M240
 
 >SnipersUSAF
 1, rhs_weap_M107_d //Barrett .50cal
