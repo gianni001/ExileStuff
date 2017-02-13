@@ -746,10 +746,10 @@
 25, Rangefinder
 40, Binocular
 5, rhs_1PN138
-2, O_NVGoggles_hex_F
-2, O_NVGoggles_urb_F
-2, O_NVGoggles_ghex_F
-2, NVGoggles_tna_F
+2, rhsusf_ANPVS_14
+2, rhsusf_ANPVS_15
+1, O_NVGoggles_ghex_F
+1, NVGoggles_tna_F
 50, ItemCompass
 
 > GuerillaClothing
@@ -858,7 +858,7 @@
 2, H_Cap_tan_Syndikat_F       
 2, H_Cap_blk_Syndikat_F       
 2, H_Cap_grn_Syndikat_F       
-2, H_FakeHeadgear_Syndikat_F    
+//2, H_FakeHeadgear_Syndikat_F    
 
 
 //Military
