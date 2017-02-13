@@ -97,6 +97,7 @@ class RscTextNS
 class RscTitles
 {
     #include "blowout_rsc.cpp"
+    #include "statusIcons\StatusIcons.hpp"
 };
 class CfgNetworkMessages
 {
