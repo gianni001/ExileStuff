@@ -38,12 +38,18 @@ switch (_keyCode) do
 	case 0x08: 	{ _stopPropagation = true; };
 	case 0x09: 	{ _stopPropagation = true; };
 	case 0x0A: 	{ _stopPropagation = true; };
+	// F1
 	case 0x3B: 	
 	{ 
 		[] call JohnO_fnc_attachChemLight;
 		_stopPropagation = true; 
 	};
-	case 0x3C: 	{ _stopPropagation = true; };
+	// F2
+	case 0x3C: 	
+	{
+		[] call ExileClient_gui_registerClanDialog_show; 
+		_stopPropagation = true; 
+	};
 	case 0x3D:	{ _stopPropagation = true; };
 	case 0x3E:	{ _stopPropagation = true; };
 	case 0x3F:	{ _stopPropagation = true; };

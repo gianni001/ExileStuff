@@ -138,11 +138,9 @@ if (diag_tickTime - ExileClientPlayerLastHpRegenerationAt >= 60) then
 	{
 		if (_thirst >= ExileClientThirstRegen) then
 		{
-			if (!(ExileClientPlayerIsInCombat) && !(ExileReborn_playerIsInfected)) then
+			if !(ExileClientPlayerIsInCombat) then
 			{
-				_level = [ExileClientPlayerScore] call JohnO_fnc_getRespectTier;
-				_level = _level / 100;
-				player setDamage (((damage player) - ExileClientRecoveryAmmount - _level) max 0);
+				player setDamage (((damage player) - ExileClientRecoveryAmmount) max 0);
 				ExileClientPlayerLastHpRegenerationAt = diag_tickTime;
 			};	
 		};	

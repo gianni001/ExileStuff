@@ -24,7 +24,7 @@ class CfgClans
 
 		Default: 20,000
 	*/
-	registrationFee = 1000;
+	registrationFee = 0;
 
 	/*
 		A list of all characters allowed in a clan *name*

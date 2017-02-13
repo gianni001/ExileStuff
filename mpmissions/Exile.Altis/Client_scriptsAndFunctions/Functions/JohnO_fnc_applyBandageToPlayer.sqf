@@ -16,12 +16,21 @@ if (time - ExileReborn_healingCoolDown >= ExileReborn_lastHealingReward) then
 	ExileReborn_lastHealingReward = time;
 	_addRespect = 120;
 	[_addRespect,0,true] call JohnO_fnc_updateRespectAndTabs;
-};	
 
-["InfoTitleAndText",
-	[
-        "Bandage applied",
-        format ["I have applied a bandage to their wounds - %1 respect", _addRespect]
-    ]
-] call ExileClient_gui_toaster_addTemplateToast;
+	["InfoTitleAndText",
+		[
+	        "Bandage applied",
+	        format ["I have applied a bandage to their wounds - %1 respect", _addRespect]
+	    ]
+	] call ExileClient_gui_toaster_addTemplateToast;
+}
+else
+{
+	["InfoTitleAndText",
+		[
+	        "Bandage applied",
+	        format ["I have applied a bandage to their wounds"]
+	    ]
+	] call ExileClient_gui_toaster_addTemplateToast;
+};
 

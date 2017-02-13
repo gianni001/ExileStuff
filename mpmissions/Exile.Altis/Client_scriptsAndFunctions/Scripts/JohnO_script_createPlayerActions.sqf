@@ -18,6 +18,7 @@ private ["_pickUpAction","_consumeAction","_hasPickUpAction","_playerhasCookingA
 
 ExileReborn_hasscavengeAction = false;
 ExileReborn_hasSearchBerriesAction = false;
+ExileReborn_has_applyPressureToSelf = false;
 
 // Dry clothes
 
@@ -195,6 +196,32 @@ ExileReborn_userActions pushBack
         "ExileReborn_hasSearchBerriesAction",
         "ExileReborn_searchBerriesAction_current",
         "[] call JohnO_fnc_canSearchForBerries",
+        true
+    ]    
+];
+
+ExileReborn_applyPressureToSelf =
+["Apply pressure to wound",
+{
+    _caller = _this select 0;
+    _action = _this select 2;
+    _caller removeAction _action;
+
+    _bleedingRemaining = getBleedingRemaining player;
+
+    player playActionNow "Medic";
+    sleep 4;
+    player setBleedingRemaining (_bleedingRemaining - 10);
+
+},"",0,false,true,"","isBleeding player"];
+
+ExileReborn_userActions pushBack 
+[
+    [
+        ExileReborn_applyPressureToSelf,
+        "ExileReborn_has_applyPressureToSelf",
+        "ExileReborn_applyPressureToSelf_current",
+        "isBleeding player",
         true
     ]    
 ];
