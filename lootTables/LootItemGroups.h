@@ -501,9 +501,9 @@
 > SniperAttachmentsAFRF
 85, rhs_acc_pso1m2
 15, rhs_acc_dh520x56
-15, rhs_acc_pso1m21
+13, rhs_acc_pso1m21
 
-
+/*
 > SniperAmmo
 10, 5Rnd_127x108_Mag									// GM6 Lynx
 10, 7Rnd_408_Mag										// M320 LRR
@@ -528,8 +528,10 @@
 26, optic_LRPS
 26, optic_LRPS_tna_F
 26, optic_LRPS_ghex_F
+*/
 
-/*> DLCRifles
+/*
+> DLCRifles
 // To overpowered. Do not use in vanilla Exile
 1, MMG_01_hex_F				//Navid
 1, MMG_01_tan_F				//Navid
@@ -558,6 +560,7 @@
 11, 20Rnd_762x51_Mag		//MK1EMR
 14, 10Rnd_127x54_Mag		//ASP1KIR
 16, 10Rnd_93x64_DMR_05_Mag	//CYRUS
+
 */
 > DLCOptics
 14, optic_AMS
@@ -593,6 +596,7 @@
 16, bipod_01_F_mtp
 17, bipod_01_F_blk
 17, bipod_01_F_khk
+20, rhs_bipod
 
 /*
 > HEGrenades
@@ -637,11 +641,6 @@
 10, rhs_mag_m69
 10, rhs_mag_mk84
 10, rhs_mag_f1	//GREF
-
-> Flares
-33, rhs_mag_nspn_green
-33, rhs_mag_nspn_red
-33, rhs_mag_nspn_yellow
 
 > Explosives
 12, DemoCharge_Remote_Mag
@@ -745,11 +744,12 @@
 
 > GuerillaItems
 25, Rangefinder
-8, NVGoggles
-8, O_NVGoggles_hex_F
-8, O_NVGoggles_urb_F
-8, O_NVGoggles_ghex_F
-8, NVGoggles_tna_F
+40, Binocular
+3, NVGoggles
+2, O_NVGoggles_hex_F
+2, O_NVGoggles_urb_F
+2, O_NVGoggles_ghex_F
+2, NVGoggles_tna_F
 50, ItemCompass
 
 > GuerillaClothing
@@ -1043,10 +1043,10 @@
 1, rhs_6b7_1m_emr
 1, rhs_6b7_1m_olive
 1, rhs_Booniehat_m81
-1,rhs_Booniehat_marpatd
-1,rhs_Booniehat_marpatwd
-1,rhs_Booniehat_ocp
-1,rhs_Booniehat_ucp
+1, rhs_Booniehat_marpatd
+1, rhs_Booniehat_marpatwd
+1, rhs_Booniehat_ocp
+1, rhs_Booniehat_ucp
 1, rhsusf_lwh_helmet_M1942
 1, rhsusf_lwh_helmet_marpatwd
 1, rhsusf_ach_bare
@@ -1303,10 +1303,13 @@
 1, Chemlight_yellow
 
 > RoadFlares
-1, FlareGreen_F
-1, FlareRed_F
-1, FlareWhite_F
-1, FlareYellow_F
+//1, FlareGreen_F
+//1, FlareRed_F
+//1, FlareWhite_F
+//1, FlareYellow_F
+33, rhs_mag_nspn_green
+33, rhs_mag_nspn_red
+33, rhs_mag_nspn_yellow
 
 > SmokeGrenades
 1, SmokeShell

@@ -98,6 +98,8 @@
 7, CivilianWeapons
 4, CivilianAmmo
 3, ShotgunAmmo
+1, SniperAmmoUSAF
+1, SniperAmmoAFRF
 4, SMG
 3, SMGAmmo
 3, SMGAttachments
@@ -273,7 +275,7 @@
 4, Restraints
 5, MedicalItems
 //8, Explosives
-6, DLCVests
+2, DLCVests
 1, Pistols
 1, PistolAmmo
-1, ThermalHelmetGroup
+//1, ThermalHelmetGroup
