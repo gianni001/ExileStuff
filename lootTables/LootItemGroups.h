@@ -91,7 +91,6 @@
 
 > PistolAmmo
 20, rhs_mag_9x19mm_7n31_20				// 4-five
-20, rhsusf_mag_15Rnd_9x19_FMJ				// 
 20, 30Rnd_9x21_Mag				// Sting, PDW2000, P07, ROOK-40
 16, 6Rnd_45ACP_Cylinder			// Zubr
 //7, 6Rnd_GreenSignal_F			// Starter Pistol
@@ -126,6 +125,18 @@
 5, rhs_weap_m38_rail
 6, rhs_weap_kar98k
 
+> CivilianAmmo
+15, Exile_Magazine_10Rnd_303					// Lee-Enfield
+3, rhs_30Rnd_545x39_AK		// AK
+4, rhs_30Rnd_545x39_AK_no_tracers		// AK
+12, Exile_Magazine_5Rnd_22LR					// CZ550
+9, rhsgref_5Rnd_792x57_kar98k				// kar98k
+5, rhsgref_10Rnd_792x57_m76				// kar98k
+25, rhsgref_5Rnd_762x54_m38				// mosin
+9, rhs_30Rnd_762x39mm						// AK-12, AKM
+9, rhs_30Rnd_762x39mm_tracer                 // AK-12, AKM
+9, rhs_30Rnd_762x39mm_89                // AK-12, AKM
+8, rhs_mag_30Rnd_556x45_M855A1_Stanag
 
 > ShotgunAmmo
 //1, Exile_Magazine_8Rnd_74Slug		//M1014
@@ -260,22 +271,6 @@
 9, 30Rnd_580x42_Mag_F						// CAR-95
 9, 30Rnd_580x42_Mag_Tracer_F				// CAR-95
 */
-
-
-> CivilianAmmo
-15, Exile_Magazine_10Rnd_303					// Lee-Enfield
-3, rhs_30Rnd_545x39_AK		// AK
-4, rhs_30Rnd_545x39_AK_no_tracers		// AK
-12, Exile_Magazine_5Rnd_22LR					// CZ550
-9, rhsgref_5Rnd_792x57_kar98k				// kar98k
-5, rhsgref_10Rnd_792x57_m76				// kar98k
-25, rhsgref_5Rnd_762x54_m38				// mosin
-9, rhs_30Rnd_762x39mm						// AK-12, AKM
-9, rhs_30Rnd_762x39mm_tracer                 // AK-12, AKM
-9, rhs_30Rnd_762x39mm_89                // AK-12, AKM
-8, rhs_mag_30Rnd_556x45_M855A1_Stanag
-
-
 
 
 > RifleAttachments
@@ -1389,7 +1384,7 @@
 5, rhs_weap_m4a1_grip2
 2, rhs_weap_m4a1_m203
 1, rhs_weap_m4a1_m203s
-1 rhs_weap_m4a1_m320
+1, rhs_weap_m4a1_m320
 2, rhs_weap_m4a1_blockII
 1, rhs_weap_m4a1_blockII_grip2
 1, rhs_weap_m4a1_blockII_grip_wd
@@ -1481,7 +1476,7 @@
 20, rhsusf_20Rnd_762x51_m118_special_Mag
 30, rhsusf_20Rnd_762x51_m993_Mag
 
->SniperAccessoriesUSAF
+>SniperAttachmentsUSAF
 10, rhsusf_acc_LEUPOLDMK4
 5, rhsusf_acc_LEUPOLDMK4_2
 5, rhsusf_acc_LEUPOLDMK4_2_d
