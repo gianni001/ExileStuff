@@ -48,7 +48,9 @@ forEach
 	// Update respect and tabs
 	["JohnO_fnc_updateRespectAndTabs","Client_scriptsAndFunctions\Functions\JohnO_fnc_updateRespectAndTabs.sqf"],
 	// Custom hit sounds
-	["JohnO_fnc_playCustomHitSound","Client_scriptsAndFunctions\Functions\JohnO_fnc_playCustomHitSound.sqf"]
+	["JohnO_fnc_playCustomHitSound","Client_scriptsAndFunctions\Functions\JohnO_fnc_playCustomHitSound.sqf"],
+	//attach chemlight
+	["JohnO_fnc_attachChemLight","Client_scriptsAndFunctions\Functions\JohnO_fnc_attachChemLight.sqf"]
 ];
 
 true

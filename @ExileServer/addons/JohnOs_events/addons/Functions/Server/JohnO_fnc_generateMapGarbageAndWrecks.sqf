@@ -74,7 +74,6 @@ if (ExileReborn_allWorldPersistantObjects isEqualTo []) then
 }
 else
 {
-	_tabsSpawned = 0;
 	{
 		_wreckVehicle = createSimpleObject [(_x select 2),(_x select 0)];
 
@@ -101,16 +100,7 @@ else
 			};	
 	    };
 
-	    if (random 1 > 0.97) then
-	    {
-	    	_popTabsObject = createVehicle ["Exile_PopTabs", (position _wreckVehicle), [], 10, "NONE"];
-	    	_amount = 500 + floor (random 5000);
-			_popTabsObject setVariable ["ExileMoney", _amount, true];
-
-			_tabsSpawned = _tabsSpawned + _amount;
-	    };	
-
 	} forEach ExileReborn_allWorldPersistantObjects;
 };	
 
-format["[Event: World Map Objects] Finished spawning world map objects -- Generated %1 popTabs as treasure",_tabsSpawned] call ExileServer_util_log;
+format["[Event: World Map Objects] Finished spawning world map objects"] call ExileServer_util_log;
