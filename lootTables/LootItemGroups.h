@@ -999,6 +999,8 @@
 //uniform
 
 //backpack
+1, rhs_sidor
+1, rhs_rpg_empty
 
 //vest
 10, rhs_6sh92_digi
@@ -1017,11 +1019,11 @@
 1, rhsgref_TacVest_ERDL
 
 //headgear
-2, rhs_fieldcap_digi
-2, rhs_fieldcap_khk
-2, rhs_fieldcap_ml
-2, rhs_fieldcap_vsr
-2, rhs_Booniehat_digi
+1, rhs_fieldcap_digi
+1, rhs_fieldcap_khk
+1, rhs_fieldcap_ml
+1, rhs_fieldcap_vsr
+1, rhs_Booniehat_digi
 1, rhs_Booniehat_flora
 1, rhs_beret_vdv1
 1, rhs_beret_vdv2
@@ -1074,6 +1076,7 @@
 > MilitaryAFRFmid
 //uniform
 5, rhs_uniform_mvd_izlom
+3, rhs_uniform_flora_patchless
 //backpack
 5, rhs_sidor
 1, rhs_rpg_empty

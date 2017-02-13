@@ -171,7 +171,7 @@
 // Towers, Barracks, Hangars etc.
 ///////////////////////////////////////////////////////////////////////////////
 > Military
-65, Trash
+45, Trash
 3, CivilianItems
 5, GuerillaItems
 //2, HEGrenades
@@ -187,20 +187,20 @@
 //5, MilitaryBackpacks
 3, GuerillaVests
 //4, MilitaryVests
-1, DLCVests
+//1, DLCVests
 3, GuerillaHeadgear
 //3, MilitaryHeadgear
 1, Rebreathers
-2, MilitaryLow
+4, MilitaryLow
 8, RiflesAFRF
 6, RifleAmmoAFRF
 8, RiflesUSAF
 6, RifleAmmoUSAF
 3, AttachmentsAFRF
 3, AttachmentsUSAF
-2, LMGAFRF
+1, LMGAFRF
 2, LMGAmmoAFRF
-2, LMGUSAF
+1, LMGUSAF
 2, LMGAmmoUSAF
 1, SnipersAFRF
 2, SniperAmmoAFRF
@@ -211,6 +211,8 @@
 1, PistolAmmo
 2, Bipods
 //1, Explosives
+
+//Thought - split the above into two separate groups, militaryAFRF and militaryUSAF?
 
 ///////////////////////////////////////////////////////////////////////////////
 // Hospital, Medevac etc. (Does not spawn on Altis!)
