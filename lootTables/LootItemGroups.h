@@ -745,7 +745,7 @@
 > GuerillaItems
 25, Rangefinder
 40, Binocular
-3, NVGoggles
+5, rhs_1PN138
 2, O_NVGoggles_hex_F
 2, O_NVGoggles_urb_F
 2, O_NVGoggles_ghex_F
