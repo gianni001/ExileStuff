@@ -3235,6 +3235,7 @@ class CfgInteractionMenus
 
 		class Actions 
 		{
+			/*
 			class ScanLock: ExileAbstractAction
 			{
 				title = "Scan Lock";
@@ -3257,7 +3258,7 @@ class CfgInteractionMenus
 				condition = "((locked ExileClientInteractionObject) isEqualTo 2) && ((locked ExileClientInteractionObject) != 1)";
 				action = "false spawn ExileClient_object_lock_toggle";
 			};
-
+			*/
 			// Repairs a vehicle to 100%. Requires Duckttape
 			/*
 			class Repair: ExileAbstractAction
@@ -3300,13 +3301,14 @@ class CfgInteractionMenus
 			};
 
 			// Hot-wires a vehicle
+			/*
 			class Hotwire: ExileAbstractAction
 			{
 				title = "Hotwire";
 				condition = "((locked ExileClientInteractionObject) isEqualTo 2) && ((locked ExileClientInteractionObject) != 1)";
 				action = "['HotwireVehicle', _this select 0] call ExileClient_action_execute";
 			};
-
+			*/
 			// Flips a vehicle so the player doesnt have to call an admin
 			// Check if vector up is fucked
 			class Flip: ExileAbstractAction
