@@ -13,7 +13,11 @@ ExileReborn_userActionTimeout = 30;
 ExileReborn_userActionTimeout_lastCheck = time;
 ExileReborn_userActionArray = [];
 ExileReborn_userActions = [];
-
+/*
+ExileClientLoadedIn = true;
+[] call ExileClient_system_thread_initialize;
+[] call ExileClient_system_process_postInit;
+*/
 [] execVM "Client_scriptsAndFunctions\Scripts\JohnO_script_createPlayerActions.sqf";
 [] execVM "Client_scriptsAndFunctions\Scripts\JohnO_script_createHints.sqf";
 

@@ -3841,7 +3841,7 @@ class CfgInteractionMenus
 			};
 		};
 	};
-
+	/*
 	class Man 
 	{
 		targetType = 2;
@@ -3857,6 +3857,7 @@ class CfgInteractionMenus
 			};
 		};
 	};
+	*/
 };
 /**
  * Classname is used for reference

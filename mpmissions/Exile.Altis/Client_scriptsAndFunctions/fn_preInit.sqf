@@ -11,8 +11,6 @@ private ['_code', '_function', '_file'];
 }
 forEach
 [
-	["JohnO_fnc_studyCorpse","Client_scriptsAndFunctions\Functions\JohnO_fnc_studyCorpse.sqf"],
-	["JohnO_fnc_temperatureStatsUpdate","Client_scriptsAndFunctions\Functions\JohnO_fnc_temperatureStatsUpdate.sqf"],
 	["JohnO_fnc_startingLoadout","Client_scriptsAndFunctions\Functions\JohnO_fnc_startingLoadout.sqf"],
 	["JohnO_fnc_applyPressureToWound","Client_scriptsAndFunctions\Functions\JohnO_fnc_applyPressureToWound.sqf"],
 	["JohnO_fnc_applyBandageToPlayer","Client_scriptsAndFunctions\Functions\JohnO_fnc_applyBandageToPlayer.sqf"],
