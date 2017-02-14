@@ -1,3 +1,4 @@
+private ["_bodyTemp"];
 
 if !(alive player) then
 {
@@ -15,8 +16,8 @@ if (((damage player) >= 0.85) && (time - ExileReborn_heartBeatInterval >= ExileR
 };
 
 // Shiver at low body temp
-
-if (((ExileClientPlayerAttributes select 5) <= 35.5) && (time - ExileReborn_shiverCooldown >= ExileReborn_shiverCooldown_timeStamp)) then
+_bodyTemp = [ExileClientPlayerAttributes select 5, 1] call ExileClient_util_math_round; 
+if ((_bodyTemp <= 35.5) && (time - ExileReborn_shiverCooldown >= ExileReborn_shiverCooldown_timeStamp)) then
 {
 	playSound "Shivering";
 	ExileReborn_shiverCooldown_timeStamp = time;

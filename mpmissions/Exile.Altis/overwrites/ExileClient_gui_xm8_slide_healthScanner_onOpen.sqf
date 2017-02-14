@@ -50,8 +50,8 @@ else
 	_infoArray = 
 	[
 		["Health",""],
-		["Wounded",ExileReborn_playerIsWounded],
-		["Infected",ExileReborn_playerIsInfected],
+		//["Wounded",ExileReborn_playerIsWounded],
+		//["Infected",ExileReborn_playerIsInfected],
 		["Clothing",ExileClientPlayerAttributes select 6],
 		["BodyTemp",""]
 	];
@@ -70,7 +70,7 @@ else
 				};
 				_percent = "%";
 			};
-
+			/*
 			if ((_x select 0) isEqualTo "Wounded") then
 			{
 				_hitPointName = "Wounded";
@@ -99,6 +99,7 @@ else
 					_hitpointHealth = "I am not infected";
 				};
 			};
+			*/
 			if ((_x select 0) isEqualTo "Clothing") then
 			{
 				_hitPointName = "Clothing";
