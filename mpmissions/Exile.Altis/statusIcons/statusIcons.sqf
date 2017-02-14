@@ -24,7 +24,9 @@ waitUntil {!(isNull (findDisplay 46))};
 		};
 	};
 	
-	sb_maintainInfo = {
+	sb_maintainInfo = 
+	{
+		disableSerialization;
 		_currentInfo = player getVariable "sb_info";
 		_currentToggled = player getVariable "infotoggled";
 		_w = 0.15;
@@ -46,7 +48,9 @@ waitUntil {!(isNull (findDisplay 46))};
 			_ctrl ctrlSetText format["%1%2",_thirst,'%'];
 		
 		
-		_hideControl = {
+		_hideControl = 
+		{
+			disableSerialization;
 			_idc = _this select 0;
 			_ctrl = _display displayCtrl _idc;
 			_y = (ctrlPosition _ctrl) select 1;
@@ -55,7 +59,9 @@ waitUntil {!(isNull (findDisplay 46))};
 			_ctrl ctrlCommit 0.25;
 			player setVariable["sb_info",false];
 		};
-		_showControl = {
+		_showControl = 
+		{
+			disableSerialization;
 			_idc = _this select 0;
 			_ctrl = _display displayCtrl _idc;
 			_y = (ctrlPosition _ctrl) select 1;
@@ -65,12 +71,16 @@ waitUntil {!(isNull (findDisplay 46))};
 			player setVariable["sb_info",true];
 		};
 		
-		if (!(_currentInfo isEqualTo _currentToggled)) then {
-			if (_currentToggled isEqualTo false) then {
+		if (!(_currentInfo isEqualTo _currentToggled)) then 
+			{
+			if (_currentToggled isEqualTo false) then 
+			{
 				[13382] call _hideControl;
 				[13383] call _hideControl;
 				[13384] call _hideControl;
-			} else {
+			} 
+			else 
+			{
 				[13382] call _showControl;
 				[13383] call _showControl;
 				[13384] call _showControl;
@@ -78,7 +88,8 @@ waitUntil {!(isNull (findDisplay 46))};
 		};
 	};
 	
-	sb_getIconBlood = {
+	sb_getIconBlood = 
+	{
 		_value = _this select 0;
 		_icon = "blood100";
 		
@@ -92,7 +103,8 @@ waitUntil {!(isNull (findDisplay 46))};
 		
 		_icon
 	};
-	sb_getIconHunger = {
+	sb_getIconHunger = 
+	{
 		_value = _this select 0;
 		_icon = "hunger100";
 		
@@ -104,7 +116,8 @@ waitUntil {!(isNull (findDisplay 46))};
 		
 		_icon
 	};
-	sb_getIconThirst = {
+	sb_getIconThirst = 
+	{
 		_value = _this select 0;
 		_icon = "thirst100";
 		
@@ -118,7 +131,9 @@ waitUntil {!(isNull (findDisplay 46))};
 	};
 
 
-	sb_fadeIn = {
+	sb_fadeIn = 
+	{
+		disableSerialization;
 		_ctrl = _this select 0;
 		//disappear
 		_ctrl ctrlSetFade 1;
@@ -129,7 +144,9 @@ waitUntil {!(isNull (findDisplay 46))};
 	
 	};
 	
-	sb_fadeOut = {
+	sb_fadeOut = 
+	{
+		disableSerialization;
 		_ctrl = _this select 0;
 		//disappear
 		_ctrl ctrlSetFade 1;
@@ -137,8 +154,9 @@ waitUntil {!(isNull (findDisplay 46))};
 	
 	};
 
-	sb_checkTemp = {
-			
+	sb_checkTemp = 
+	{
+			disableSerialization;
 			_display = (uiNamespace getVariable "StatusIcons");
 			
 			_bodyTemperature = [ExileClientPlayerAttributes select 5, 1] call ExileClient_util_math_round;
@@ -158,8 +176,9 @@ waitUntil {!(isNull (findDisplay 46))};
 	
 	};
 	
-	sb_updateIcons = {
-
+	sb_updateIcons = 
+	{
+		disableSerialization;
 		_iconh = 			_this select 0;
 		_iconf = 			_this select 1;
 		_iconw = 			_this select 2;
@@ -185,12 +204,14 @@ waitUntil {!(isNull (findDisplay 46))};
 	};
 	
 	
-	sb_init = {
-		waitUntil {
+	sb_init = 
+	{
+		waitUntil 
+		{
 			(!isNil {round (ExileClientPlayerAttributes select 3)}) && (!isNil {round (ExileClientPlayerAttributes select 2)});
 		};
-		
-		systemChat "Initialising DayZ Icons...";
+		disableSerialization;
+		//systemChat "Initialising DayZ Icons...";
 		player setVariable["sb_info",true];
 		player setVariable["infotoggled",false];
 		_health = round ((1 - (damage player)) * 100);
@@ -209,7 +230,9 @@ waitUntil {!(isNull (findDisplay 46))};
 		player setVariable ["sb_isCold",false];
 		_rscLayer = "StatusIcons" call BIS_fnc_rscLayer;
 		_rscLayer = cutRsc["StatusIcons","PLAIN",1,false];
-		_initIcons = {
+		_initIcons = 
+		{
+			disableSerialization;
 			_idc = _this select 0;
 			_icon = _this select 1;
 			_display = (uiNamespace getVariable "StatusIcons");
@@ -224,7 +247,7 @@ waitUntil {!(isNull (findDisplay 46))};
 		[(_display displayCtrl 13375)] call sb_fadeOut;
 		[(_display displayCtrl 13395)] call sb_fadeOut;
 		[_hpIcon,_hungerIcon,_thirstIcon,true] call sb_updateIcons;
-		[] call sb_checkTemp;
+		//[] call sb_checkTemp;
 
 		[] call sb_hideExileIcons;
 		
@@ -234,7 +257,7 @@ waitUntil {!(isNull (findDisplay 46))};
 	sb_maintain = {
 	
 		if ((isNil {round (ExileClientPlayerAttributes select 3)}) || (isNil {round (ExileClientPlayerAttributes select 2)})) then {
-			systemChat "Status variables are NIL, reinitialising...";
+			//systemChat "Status variables are NIL, reinitialising...";
 			[] call sb_init;
 		} else {
 		
@@ -311,7 +334,7 @@ waitUntil {!(isNull (findDisplay 46))};
 				[_upHp,_upHunger,_upThirst] call sb_updateIcons;
 				
 			};
-				[] call sb_checkTemp;
+				//[] call sb_checkTemp;
 				[] call sb_maintainInfo;
 				[] call sb_hideExileIcons;
 				
@@ -320,7 +343,7 @@ waitUntil {!(isNull (findDisplay 46))};
 				if (isNull _disp) then {
 					if (alive player) then {
 					
-					systemChat "DayZ Icons closed. Redrawing.";	
+					//systemChat "DayZ Icons closed. Redrawing.";	
 					_rscLayer = "StatusIcons" call BIS_fnc_rscLayer; 
 					_rscLayer = cutRsc["StatusIcons","PLAIN",1,false];
 					[] call sb_init;
@@ -331,7 +354,6 @@ waitUntil {!(isNull (findDisplay 46))};
 	};
 	
 	
-	diag_log "starting DayZ icons";
 	[] call sb_init;
 	[0.5, sb_maintain, [], true] call ExileClient_system_thread_addtask;
 	uiSleep 5;

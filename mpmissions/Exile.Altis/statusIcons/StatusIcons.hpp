@@ -1,4 +1,7 @@
-class RscControlsGroup {
+
+class RscControlsGroup 
+{
+
     type = 15;
     idc = -1;
     style = 0;
@@ -6,21 +9,25 @@ class RscControlsGroup {
     y = 0;
     w = 1;
     h = 1;
- 
-    class VScrollbar {
-        color[] = {1,1,1,1};
+ 	
+    class VScrollbar 
+    {
+
+        color[] = {0,0,0,0};
         width = 0.021000;
         autoScrollSpeed = -1;
         autoScrollDelay = 5;
         autoScrollRewind = 0;
     };
  
-    class HScrollbar {
-        color[] = {1, 1, 1, 1};
+    class HScrollbar 
+    {
+        color[] = {0, 0, 0, 0};
         height = 0.028;
     };
- 
-    class ScrollBar { 
+ 	
+    class ScrollBar 
+    { 
         color[] = {1,1,1,0.600000};
         colorActive[] = {1,1,1,1};
         colorDisabled[] = {1,1,1,0.300000};
@@ -29,27 +36,30 @@ class RscControlsGroup {
         arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
         border = "#(argb,8,8,3)color(1,1,1,1)";
     };
- 
+ 	
     class Controls {};
 };
-class RscText{
-						colorText[]=
-						{"1",	"1","1",1};
-						text="";
-						font="EtelkaNarrowMediumPro";
-						shadow=1;
-						fixedWidth=0;
-						type = 0;
-						linespacing=0;
-						style = 2096;
-						sizeEx="11 * pixelH";
-						colorBackground[] = {0,0,0,0};
-						colorShadow[] = {1,1,1,0};
+
+class RscText
+{
+	colorText[]=
+	{"1",	"1","1",1};
+	text="";
+	font="EtelkaNarrowMediumPro";
+	shadow=1;
+	fixedWidth=0;
+	type = 0;
+	linespacing=0;
+	style = 2096;
+	sizeEx="11 * pixelH";
+	colorBackground[] = {0,0,0,0};
+	colorShadow[] = {1,1,1,0};
 	
 };
 
-class StatusIcons {
-	
+class StatusIcons 
+{
+
 		idd = 13370;
 		fadein = 1;
 		fadeout = 1;

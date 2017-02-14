@@ -41,7 +41,7 @@ switch (_keyCode) do
 	// F1
 	case 0x3B: 	
 	{ 
-		[] call JohnO_fnc_attachChemLight;
+		[] spawn JohnO_fnc_attachChemLight;
 		_stopPropagation = true; 
 	};
 	// F2
