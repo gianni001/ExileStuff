@@ -23,6 +23,5 @@ _headGear = (selectRandom _headGearSelection);
 
 player forceAddUniform _uniform;
 player addHeadgear _headGear;
-player addVest "V_Rangemaster_belt";
 player addItemToUniform "Exile_Item_Bandage";
 player addItemToUniform "Chemlight_blue";

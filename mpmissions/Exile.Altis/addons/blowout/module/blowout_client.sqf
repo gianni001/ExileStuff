@@ -56,10 +56,7 @@ bl_local_anims =
         {
             if ((vehicle player) == player) then
             {
-                if !(ExileReborn_playerIsKnockedOut) then
-                {
-                    player switchMove "AcinPercMrunSnonWnonDf_agony";
-                };
+                player switchMove "AcinPercMrunSnonWnonDf_agony";
             };
         };
 };
@@ -554,7 +551,6 @@ while {true} do
         _endPosition = [_startPosition select 0, _startPosition select 1, (_startPosition select 2 ) + 10];
         _intersections = lineIntersectsSurfaces [_startPosition, _endPosition, player, objNull, false, 1, "GEOM", "VIEW"];
         _isBelowRoof = !(_intersections isEqualTo []);
-        _newResistanceLevel = 0;
 
         if (_isBelowRoof) then
         {
@@ -565,14 +561,12 @@ while {true} do
         {
             _randAmount = random 0.2;
 
-            _newResistanceLevel = (_resistance + 0.01);
-            player setDamage (damage player + ns_blow_damage_unprotected + _randAmount) - _resistance;
+            player setDamage (damage player + ns_blow_damage_unprotected + _randAmount);
         }
         else
         {
 
-            _newResistanceLevel = (_resistance + 0.01);
-            player setDamage (damage player + ns_blow_damage_inbuilding) - _resistance;
+            player setDamage (damage player + ns_blow_damage_inbuilding);
         };
 
         _playerVehicle = vehicle player;

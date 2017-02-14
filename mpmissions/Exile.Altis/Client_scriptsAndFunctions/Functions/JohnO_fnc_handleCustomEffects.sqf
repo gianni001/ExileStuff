@@ -19,9 +19,9 @@ if (((damage player) >= 0.85) && (time - ExileReborn_heartBeatInterval >= ExileR
 _bodyTemp = [ExileClientPlayerAttributes select 5, 1] call ExileClient_util_math_round; 
 if ((_bodyTemp <= 35.5) && (time - ExileReborn_shiverCooldown >= ExileReborn_shiverCooldown_timeStamp)) then
 {
-	playSound "Shivering";
+	playSound ["Shivering",true];
 	ExileReborn_shiverCooldown_timeStamp = time;
 	enableCamShake true;
-	addCamShake [3,2,10];
+	addCamShake [1,20,10];
 	enableCamShake false;
 };

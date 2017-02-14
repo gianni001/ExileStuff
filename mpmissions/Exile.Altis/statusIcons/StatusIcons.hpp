@@ -74,7 +74,7 @@ class StatusIcons
 			{
 				idc=13371;
 				x = safeZoneX;
-				y = 2 / 2 - 0.15;
+				y = 1 / 2 - 0.15;
 				w = 0.1721618 * safezoneW;
 				h = 0.560125 * safezoneH;
 				colorBackground[] = {0,0,0,0};

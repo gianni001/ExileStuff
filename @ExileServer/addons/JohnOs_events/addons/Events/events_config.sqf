@@ -10,6 +10,7 @@ Persistent_UID = "76561197972232595";												// Change me..
 Event_world_centerPosition = getArray(configFile >> "CfgWorlds" >> worldName >> "centerPosition");
 Event_world_size = 30000;
 Event_extraDebugLogging = true;
+Event_RoamingAI_DebugEvent = false;
 
 /** Zombie stuff **/
 
@@ -164,3 +165,26 @@ ExileReborn_allMapBuildings = [0,0,0] nearObjects ["House", 100000];
 	_x setDamage 0.9;
 } forEach ExileReborn_allMapBuildings;	
 
+//SP Testing
+/*
+[] spawn 
+{
+	while {true} do
+	{
+		[] call JohnO_fnc_heliCrash_new;
+		[] call JohnO_fnc_eventMonitor;
+		[] call JohnO_fnc_simulationManager;
+		//[] call JohnO_fnc_supplyDrop_spawnEvent;
+		[] call JohnO_fnc_spawnStormEvent;
+		uiSleep 15;
+	};	
+};
+[] spawn 
+{
+	while {true} do
+	{
+		[] call JohnO_fnc_zombieIdleBehaviour;
+		uiSleep 1;
+		hint str count diag_activeSQFScripts;
+	};	
+};
