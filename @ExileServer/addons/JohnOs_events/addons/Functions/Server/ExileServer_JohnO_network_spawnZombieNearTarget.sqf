@@ -17,7 +17,8 @@ if (isNull _target) exitWith
 
 ryanzombiesdisablescript = true;
 Ryanzombieslogicroam = true;
-Ryanzombieshealth = 0.9;
+Ryanzombieshealth = 0.98;
+Ryanzombiesdamage = 0.1;
 
 if ((daytime > 17) && (daytime < 6)) then
 {

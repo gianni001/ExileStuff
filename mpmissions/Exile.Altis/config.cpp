@@ -3134,7 +3134,7 @@ class CfgExileLootSettings
 	 *
 	 * You can also cap it at a maximum value. See below.
 	 */
-	maximumPositionCoverage = 30;
+	maximumPositionCoverage = 40;
 
  	/**
  	 * Limit the number of loot positions per building. If the 
@@ -3144,7 +3144,7 @@ class CfgExileLootSettings
  	 * This results in 30 loot positions and that is too much. So we
  	 * cap this at 10
  	 */
-	maximumNumberOfLootSpotsPerBuilding = 3;
+	maximumNumberOfLootSpotsPerBuilding = 8;
 
 	/**
 	 * Exile spawns a random number of items per loot spot. This 
