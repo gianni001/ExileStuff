@@ -1,5 +1,8 @@
 waitUntil {!(isNull (findDisplay 46))};
 	disableSerialization;
+	ExileReborn_StatusIcon_isDamaged = false;
+	ExileReborn_StatusIcon_isHungry = false;
+	ExileReborn_StatusIcon_isThirsty = false;
 	uiSleep 4;
 	
 	waitUntil {
@@ -31,21 +34,18 @@ waitUntil {!(isNull (findDisplay 46))};
 		_currentToggled = player getVariable "infotoggled";
 		_w = 0.15;
 		_h = _w * 3/4;
-		_display = uiNamespace getVariable "StatusIcons"; 
+		_display = uiNamespace getVariable "StatusIcons"; 		
 		
+		_health = round ((1 - (damage player)) * 100);
+		_hunger = round (ExileClientPlayerAttributes select 2);
+		_thirst = round (ExileClientPlayerAttributes select 3);
 		
-		
-		
-			_health = round ((1 - (damage player)) * 100);
-			_hunger = round (ExileClientPlayerAttributes select 2);
-			_thirst = round (ExileClientPlayerAttributes select 3);
-			
-			_ctrl = _display displayCtrl 13382;
-			_ctrl ctrlSetText format["%1%2",_health,'%'];
-			_ctrl = _display displayCtrl 13383;
-			_ctrl ctrlSetText format["%1%2",_hunger,'%'];
-			_ctrl = _display displayCtrl 13384;
-			_ctrl ctrlSetText format["%1%2",_thirst,'%'];
+		_ctrl = _display displayCtrl 13382;
+		_ctrl ctrlSetText format["%1%2",_health,'%'];
+		_ctrl = _display displayCtrl 13383;
+		_ctrl ctrlSetText format["%1%2",_hunger,'%'];
+		_ctrl = _display displayCtrl 13384;
+		_ctrl ctrlSetText format["%1%2",_thirst,'%'];
 		
 		
 		_hideControl = 
@@ -81,9 +81,18 @@ waitUntil {!(isNull (findDisplay 46))};
 			} 
 			else 
 			{
-				[13382] call _showControl;
-				[13383] call _showControl;
-				[13384] call _showControl;
+				if (_health < 100) then
+				{	
+					[13382] call _showControl;
+				};
+				if (_hunger <= 60) then
+				{	
+					[13383] call _showControl;
+				};
+				if (_thirst <= 60) then
+				{	
+					[13384] call _showControl;
+				};	
 			};
 		};
 	};
@@ -94,7 +103,7 @@ waitUntil {!(isNull (findDisplay 46))};
 		_icon = "blood100";
 		
 		if (_value >= 100 ) then 					{ _icon ="blood100";	};
-		if (_value <80 ) then 		{ _icon ="blood75";		};
+		if (_value <100 ) then 		{ _icon ="blood75";		};
 		if (_value <60 ) then 		{ _icon ="blood50";		};
 		if (_value <30 ) then 		{ _icon ="blood25";		};
 		if (_value <20 ) then 		{ _icon ="blood10";		};
@@ -183,22 +192,76 @@ waitUntil {!(isNull (findDisplay 46))};
 		_iconf = 			_this select 1;
 		_iconw = 			_this select 2;
 		
-
 		_display = (uiNamespace getVariable "StatusIcons");
-		
-		if (_iconh != "-1") then {
-			(_display displayCtrl 13392) ctrlSetText format["statusIcons\circlebar\blood\%1.paa",_iconh];
-			[(_display displayCtrl 13392)] call sb_fadeIn;
+
+		_health = round ((1 - (damage player)) * 100);
+		_hunger = round (ExileClientPlayerAttributes select 2);
+		_thirst = round (ExileClientPlayerAttributes select 3);
+
+		if (!(ExileReborn_StatusIcon_isDamaged) && (_health < 100)) then 
+		{
+			[(_display displayCtrl 13372)] call sb_fadeIn;
+			ExileReborn_StatusIcon_isDamaged = true;
+		};
+
+		if (!(ExileReborn_StatusIcon_isHungry) && (_hunger <= 50)) then 
+		{
+			[(_display displayCtrl 13373)] call sb_fadeIn;
+			ExileReborn_StatusIcon_isHungry = true;
+		};
+
+		if (!(ExileReborn_StatusIcon_isThirsty) && (_thirst <= 50)) then 
+		{
+			[(_display displayCtrl 13374)] call sb_fadeIn;
+			ExileReborn_StatusIcon_isThirsty = true;
 		};
 		
-		if (_iconf != "-1") then {
-			(_display displayCtrl 13393) ctrlSetText format["statusIcons\circlebar\hunger\%1.paa",_iconf];
-			[(_display displayCtrl 13393)] call sb_fadeIn;
+		if (_iconh != "-1") then 
+		{
+			if (_health < 100) then
+			{	
+				(_display displayCtrl 13392) ctrlSetText format["statusIcons\circlebar\blood\%1.paa",_iconh];
+				//[(_display displayCtrl 13372)] call sb_fadeIn;
+				[(_display displayCtrl 13392)] call sb_fadeIn;
+			}
+			else
+			{
+				[(_display displayCtrl 13372)] call sb_fadeout;
+				[(_display displayCtrl 13392)] call sb_fadeout;
+				ExileReborn_StatusIcon_isDamaged = false;
+			};	
 		};
-		
-		if (_iconw != "-1") then {
-			(_display displayCtrl 13394) ctrlSetText format["statusIcons\circlebar\thirst\%1.paa",_iconw];
-			[(_display displayCtrl 13394)] call sb_fadeIn;
+	
+		if (_iconf != "-1") then 
+		{
+			if (_hunger <= 50) then
+			{	
+				(_display displayCtrl 13393) ctrlSetText format["statusIcons\circlebar\hunger\%1.paa",_iconf];
+				//[(_display displayCtrl 13373)] call sb_fadeIn;
+				[(_display displayCtrl 13393)] call sb_fadeIn;
+			}
+			else
+			{
+				[(_display displayCtrl 13373)] call sb_fadeout;
+				[(_display displayCtrl 13393)] call sb_fadeout;
+				ExileReborn_StatusIcon_isHungry = false;
+			};	
+		};
+	
+		if (_iconw != "-1") then 
+		{
+			if (_thirst <= 50) then
+			{	
+				(_display displayCtrl 13394) ctrlSetText format["statusIcons\circlebar\thirst\%1.paa",_iconw];
+				//[(_display displayCtrl 13374)] call sb_fadeIn;
+				[(_display displayCtrl 13394)] call sb_fadeIn;
+			}
+			else
+			{
+				[(_display displayCtrl 13374)] call sb_fadeout;
+				[(_display displayCtrl 13394)] call sb_fadeout;
+				ExileReborn_StatusIcon_isThirsty = false;
+			};	
 		};
 		
 	};
@@ -246,6 +309,12 @@ waitUntil {!(isNull (findDisplay 46))};
 		_display = (uiNamespace getVariable "StatusIcons");
 		[(_display displayCtrl 13375)] call sb_fadeOut;
 		[(_display displayCtrl 13395)] call sb_fadeOut;
+
+		[(_display displayCtrl 13372)] call sb_fadeOut;
+		[(_display displayCtrl 13373)] call sb_fadeOut;
+		[(_display displayCtrl 13374)] call sb_fadeOut;
+
+		
 		[_hpIcon,_hungerIcon,_thirstIcon,true] call sb_updateIcons;
 		//[] call sb_checkTemp;
 
@@ -254,12 +323,16 @@ waitUntil {!(isNull (findDisplay 46))};
 	};
 	
 	
-	sb_maintain = {
+	sb_maintain = 
+	{
 	
-		if ((isNil {round (ExileClientPlayerAttributes select 3)}) || (isNil {round (ExileClientPlayerAttributes select 2)})) then {
+		if ((isNil {round (ExileClientPlayerAttributes select 3)}) || (isNil {round (ExileClientPlayerAttributes select 2)})) then 
+		{
 			//systemChat "Status variables are NIL, reinitialising...";
 			[] call sb_init;
-		} else {
+		} 
+		else 
+		{
 		
 			_health = round ((1 - (damage player)) * 100);
 			_hunger = round (ExileClientPlayerAttributes select 2);
@@ -309,7 +382,8 @@ waitUntil {!(isNull (findDisplay 46))};
 			
 			
 			
-			if (_statchanged) then {
+			if (_statchanged) then 
+			{
 				
 				player setVariable ["sb_lastArray", [_health,_hunger,_thirst]];
 				
@@ -334,22 +408,24 @@ waitUntil {!(isNull (findDisplay 46))};
 				[_upHp,_upHunger,_upThirst] call sb_updateIcons;
 				
 			};
-				//[] call sb_checkTemp;
-				[] call sb_maintainInfo;
-				[] call sb_hideExileIcons;
+			//[] call sb_checkTemp;
+			[] call sb_maintainInfo;
+			[] call sb_hideExileIcons;
+			
+			
+			_disp = (uiNamespace getVariable "StatusIcons");
+			if (isNull _disp) then 
+			{
+				if (alive player) then 
+				{
 				
-				
-				_disp = (uiNamespace getVariable "StatusIcons");
-				if (isNull _disp) then {
-					if (alive player) then {
-					
-					//systemChat "DayZ Icons closed. Redrawing.";	
-					_rscLayer = "StatusIcons" call BIS_fnc_rscLayer; 
-					_rscLayer = cutRsc["StatusIcons","PLAIN",1,false];
-					[] call sb_init;
-					};
+				//systemChat "DayZ Icons closed. Redrawing.";	
+				_rscLayer = "StatusIcons" call BIS_fnc_rscLayer; 
+				_rscLayer = cutRsc["StatusIcons","PLAIN",1,false];
+				[] call sb_init;
+
 				};
-				
+			};		
 		};
 	};
 	

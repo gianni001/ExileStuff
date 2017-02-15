@@ -56,7 +56,8 @@ bl_local_anims =
         {
             if ((vehicle player) == player) then
             {
-                player switchMove "AcinPercMrunSnonWnonDf_agony";
+                //player switchMove "AcinPercMrunSnonWnonDf_agony";
+                player setUnconscious true;
             };
         };
 };
@@ -68,7 +69,8 @@ bl_local_def_anim =
         {
             if ((vehicle player) == player) then
             {
-                player switchMove "";
+                //player switchMove "";
+                player setUnconscious false;
             };
         };
 };
