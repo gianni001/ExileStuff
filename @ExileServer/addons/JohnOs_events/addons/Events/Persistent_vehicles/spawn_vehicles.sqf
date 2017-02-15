@@ -103,14 +103,14 @@ _vehicleArray =
 	["RHS_Mi8AMT_vvs",1,[[23483.9,21144.8,0],[25240.1,21828.6,0]],false],		
 	["RHS_MELB_H6M",1,[[12834.2,16735.8,0],[23079.8,7299.1,0]],false],
 	["RHS_CH_47F_10",1,[[17550.5,13240.5,0],[26783.6,24673,0]],false],						
-	["rhs_ka60_grey",1,[[3732.07,12976.3,20]],false]											// Kavala hospital
+	["rhs_ka60_grey",1,[[3732.07,12976.3,20]],false],											// Kavala hospital
 	
 	
 
 	["RHS_Mi8mt_Cargo_vvs",1,[[23014.4,18864.9,0]],false],	//salt flats
 	["RHS_Mi24Vt_vvs",1,[[20798.2,7227.74,0]],false], //Selekano
 	["RHS_UH60M_d",1,[[11578.3,11908,0], [9187.2,21622.8,0]],false], //AAC, North Abdera
-	["rhsusf_CH53E_USMC",1,[[23815,16009.6,0]],false],//sea king @ Ochrolimni
+	["rhsusf_CH53E_USMC",1,[[23815,16009.6,0]],false]//sea king @ Ochrolimni
 	//["RHS_UH1Y_UNARMED",1,[],false],
 	
 	
