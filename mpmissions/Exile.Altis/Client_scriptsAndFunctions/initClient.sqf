@@ -20,8 +20,9 @@ ExileClientLoadedIn = true;
 */
 [] execVM "Client_scriptsAndFunctions\Scripts\JohnO_script_createPlayerActions.sqf";
 [] execVM "Client_scriptsAndFunctions\Scripts\JohnO_script_createHints.sqf";
+[] execVM "Client_scriptsAndFunctions\Scripts\JohnO_script_introChat.sqf";
 
 [1, JohnO_fnc_handleCustomEffects, [], true] call ExileClient_system_thread_addtask;
 [300, JohnO_fnc_handlePlayerZombieDetection, [], true] call ExileClient_system_thread_addtask;
-[2, JohnO_fnc_handlePlayerActions, [], true] call ExileClient_system_thread_addtask;
+[0.5, JohnO_fnc_handlePlayerActions, [], true] call ExileClient_system_thread_addtask;
 [600, JohnO_fnc_displayHints, [], true] call ExileClient_system_thread_addtask;
