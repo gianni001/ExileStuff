@@ -28,7 +28,24 @@ addons[]=
 	"exile_client",
 	"rhsusf_c_troops",
 	"rhsusf_c_markvsoc",
-	"Ryanzombies"
+	"Ryanzombies",
+	"rhsusf_c_mrzr",
+	"rhsusf_vehicles",
+	"rhsusf_c_fmtv",
+	"rhsusf_c_m113",
+	"rhsusf_c_rg33l",
+	"rhs_c_a2port_car",
+	"rhs_c_cars",
+	"rhs_c_kamaz",
+	"rhs_c_a2port_car",
+	"rhs_c_troops",
+	"rhs_c_trucks",
+	"rhs_c_a2port_armor",
+	"rhs_c_air",
+	"rhsusf_c_melb",
+	"rhs_c_a2port_air",
+	"rhs_us_a2_airimport",
+	"rhsusf_c_ch53"
 };
 class AddonsMetaData
 {
