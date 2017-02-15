@@ -41,34 +41,78 @@ _vehicleArray =
 	["Exile_Car_SUV_Grey",1,[],true],
 	["Exile_Car_SUV_Orange",1,[],true],
 	// Volha
-	["Exile_Car_Volha_Blue",1,[],true],
-	["Exile_Car_Volha_White",1,[],true],
-	["Exile_Car_Volha_Black",1,[],true],
+	//["Exile_Car_Volha_Blue",1,[],true],
+	//["Exile_Car_Volha_White",1,[],true],
+	//["Exile_Car_Volha_Black",1,[],true],
 	// Bus
 	["Exile_Car_Ikarus_Blue",1,[],true],
 	// Zamak
-	["Exile_Car_Zamak",1,[],true],
+	//["Exile_Car_Zamak",1,[],true],
 	// Urals
-	["Exile_Car_Ural_Covered_Blue",1,[],true],
-	["Exile_Car_Ural_Covered_Yellow",1,[],true],
-	["Exile_Car_Ural_Covered_Worker",1,[],true],
-	["Exile_Car_Ural_Covered_Military",1,[],true],
+	//["Exile_Car_Ural_Covered_Blue",1,[],true],
+	//["Exile_Car_Ural_Covered_Yellow",1,[],true],
+	//["Exile_Car_Ural_Covered_Worker",1,[],true],
+	//["Exile_Car_Ural_Covered_Military",1,[],true],
 	// Land rovers
-	["Exile_Car_LandRover_Red",1,[],true],
-	["Exile_Car_LandRover_Urban",1,[],true],
-	["Exile_Car_LandRover_Green",1,[],true],
-	["Exile_Car_LandRover_Sand",1,[],true],
-	["Exile_Car_LandRover_Desert",1,[],true],
+	//["Exile_Car_LandRover_Red",1,[],true],
+	//["Exile_Car_LandRover_Urban",1,[],true],
+	//["Exile_Car_LandRover_Green",1,[],true],
+	//["Exile_Car_LandRover_Sand",1,[],true],
+	//["Exile_Car_LandRover_Desert",1,[],true],
+	
+	//RHS - USAF
+	
+	["rhsusf_mrzr4_d",1,[],true],
+	["rhsusf_m1025_d",1,[],true],
+	["rhsusf_m998_d_4dr",1,[],true],
+	["rhsusf_m998_w_s_4dr",1,[],true],
+	["rhsusf_M1083A1P2_d_fmtv_usarmy",1,[],true],
+	["rhsusf_M1078A1P2_d_open_fmtv_usarmy",1,[],true],
+	["rhsusf_m113d_usarmy_unarmed",1,[],true],
+	["rhsusf_m113_usarmy_unarmed",1,[],true],
+	["rhsusf_M1232_usarmy_d",1,[],true],	//RG-33l MRAP  	//Use custom pos
+	["rhsusf_M1232_usarmy_wd",1,[],true],	//RG-33l MRAP 	//Use custom pos
+	
+
+	
+	
+	//RHS - AFRF
+	
+	["rhs_uaz_vdv",1,[],true],
+	["rhs_uaz_open_MSV_01",1,[],true],
+	["rhs_tigr_3camo_msv",1,[],true],
+	["rhs_tigr_m_vdv",1,[],true],
+	["rhs_kamaz5350_open_vdv",1,[],true],
+	["rhs_kamaz5350_vdv",1,[],true],
+	["RHS_Ural_Open_VDV_01",1,[],true],
+	["rhs_gaz66_vv",1,[],true],
+
+	
+	//Armed
+	["rhs_btr60_msv",1,[],true], 	//Use custom pos
+	["rhs_btr70_msv",1,[],true], 	//Use custom pos
+
+	
 	// Apex stuff
-	["Exile_Car_ProwlerUnarmed",2,[],true],
-	["Exile_Car_QilinUnarmed",2,[],true],
-	["Exile_Car_MB4WD",2,[],true],
-	["Exile_Car_MB4WDOpen",2,[],true],
+	//["Exile_Car_ProwlerUnarmed",1,[],true],
+	//["Exile_Car_QilinUnarmed",1,[],true],
+	["Exile_Car_MB4WD",1,[],true],
+	["Exile_Car_MB4WDOpen",1,[],true],
+	
 	// Choppers	
-	["Exile_Chopper_Hellcat_Green",1,[[23483.9,21144.8,0],[25240.1,21828.6,0]],true],		
-	["Exile_Chopper_Hummingbird_Green",1,[[12834.2,16735.8,0],[23079.8,7299.1,0]],true],
-	["Exile_Chopper_Mohawk_FIA",1,[[17550.5,13240.5,0],[26783.6,24673,0]],true],						
-	["Exile_Chopper_Orca_CSAT",1,[[3732.07,12976.3,20]],true]											// Kavala hospital
+	["RHS_Mi8AMT_vvs",1,[[23483.9,21144.8,0],[25240.1,21828.6,0]],false],		
+	["RHS_MELB_H6M",1,[[12834.2,16735.8,0],[23079.8,7299.1,0]],false],
+	["RHS_CH_47F_10",1,[[17550.5,13240.5,0],[26783.6,24673,0]],false],						
+	["rhs_ka60_grey",1,[[3732.07,12976.3,20]],false]											// Kavala hospital
+	
+	
+
+	["RHS_Mi8mt_Cargo_vvs",1,[[23014.4,18864.9,0]],false],	//salt flats
+	["RHS_Mi24Vt_vvs",1,[[20798.2,7227.74,0]],false], //Selekano
+	["RHS_UH60M_d",1,[[11578.3,11908,0], [9187.2,21622.8,0]],false], //AAC, North Abdera
+	["rhsusf_CH53E_USMC",1,[[23815,16009.6,0]],false],//sea king @ Ochrolimni
+	//["RHS_UH1Y_UNARMED",1,[],false],
+	
 	
 ];
 
