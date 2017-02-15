@@ -6,7 +6,7 @@ ExileRebornVersion = "0.8.2";
 publicVariable "ExileRebornVersion";
 
 Event_DEBUG_Location = [0,0,0];
-Persistent_UID = "76561197972232595";												// Change me..
+Persistent_UID = "76561197993112948";												// Change me..
 Event_world_centerPosition = getArray(configFile >> "CfgWorlds" >> worldName >> "centerPosition");
 Event_world_size = 30000;
 Event_extraDebugLogging = true;

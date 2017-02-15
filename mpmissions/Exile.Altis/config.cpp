@@ -2077,9 +2077,9 @@ class CfgExileArsenal
 	class arifle_SPAR_01_GL_blk_F     { quality = 1; price = 720; };
 	class arifle_SPAR_01_GL_khk_F     { quality = 1; price = 720; };
 	class arifle_SPAR_01_GL_snd_F     { quality = 1; price = 720; };
-	class arifle_SPAR_02_blk_F        { quality = 2; price = 800; };
-	class arifle_SPAR_02_khk_F        { quality = 2; price = 800; };
-	class arifle_SPAR_02_snd_F        { quality = 2; price = 800; };
+	//class arifle_SPAR_02_blk_F        { quality = 2; price = 800; };
+	//class arifle_SPAR_02_khk_F        { quality = 2; price = 800; };
+	//class arifle_SPAR_02_snd_F        { quality = 2; price = 800; };
 	class arifle_SPAR_03_blk_F        { quality = 4; price = 1450; };
 	class arifle_SPAR_03_khk_F        { quality = 4; price = 1450; };
 	class arifle_SPAR_03_snd_F        { quality = 4; price = 1450; };					
@@ -2773,6 +2773,8 @@ class CfgExileCustomCode
     ExileClient_util_world_getNearestLocationName = "overwrites\ExileClient_util_world_getNearestLocationName.sqf";
     // Custom sound on hit
     ExileClient_object_player_event_onHit = "overwrites\ExileClient_object_player_event_onHit.sqf";
+    // Custom loadout
+    ExileClient_object_player_network_createPlayerResponse = "overwrites\ExileClient_object_player_network_createPlayerResponse.sqf";
     /** Server overwrites **/
 
     // manipulate garbage collection
