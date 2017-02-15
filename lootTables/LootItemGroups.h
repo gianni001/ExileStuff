@@ -743,13 +743,14 @@
 //Guerilla
 
 > GuerillaItems
-25, Rangefinder
+12, rhs_pdu4
+12, lerca_1200_tan
 40, Binocular
 5, rhs_1PN138
 2, rhsusf_ANPVS_14
 2, rhsusf_ANPVS_15
-1, O_NVGoggles_ghex_F
-1, NVGoggles_tna_F
+//1, O_NVGoggles_ghex_F
+//1, NVGoggles_tna_F
 50, ItemCompass
 
 > GuerillaClothing
