@@ -79,7 +79,7 @@ if !(_validPlayerArray isEqualTo []) then
 					_killingPlayer setVariable ["ExileScore", _newRespect];
 					_killSummary = [];
 					_killSummary pushBack ["ZOMBIE KILLED", _amountEarned];
-					[_killingPlayer, "showFragRequest", [_killSummary]] call ExileServer_system_network_send_to;
+					//[_killingPlayer, "showFragRequest", [_killSummary]] call ExileServer_system_network_send_to;
 					format["setAccountScore:%1:%2", _newRespect, getPlayerUID _killingPlayer] call ExileServer_system_database_query_fireAndForget;
 					_killingPlayer call ExileServer_object_player_sendStatsUpdate;	
 				}
