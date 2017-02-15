@@ -211,6 +211,8 @@ sb_updateIcons =
 	_thirst = round (ExileClientPlayerAttributes select 3);
 	*/
 
+	_display = (uiNamespace getVariable "StatusIcons");
+
 	_health = _this select 0;
 	_hunger = _this select 1;
 	_thirst = _this select 2;
