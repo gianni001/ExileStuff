@@ -45,7 +45,8 @@ addons[]=
 	"rhsusf_c_melb",
 	"rhs_c_a2port_air",
 	"rhs_us_a2_airimport",
-	"rhsusf_c_ch53"
+	"rhsusf_c_ch53",
+	"rhs_c_a3retex"
 };
 class AddonsMetaData
 {
