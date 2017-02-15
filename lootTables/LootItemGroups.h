@@ -141,9 +141,9 @@
 > ShotgunAmmo
 //1, Exile_Magazine_8Rnd_74Slug		//M1014
 //rhsusf_5Rnd_00Buck
-10, rhsusf_8Rnd_00Buck
+20, rhsusf_8Rnd_00Buck
 //rhsusf_5Rnd_Slug
-10, rhsusf_8Rnd_Slug
+15, rhsusf_8Rnd_Slug
 //rhsusf_5Rnd_HE
 1, rhsusf_8Rnd_HE
 //rhsusf_5Rnd_FRAG
@@ -153,8 +153,8 @@
 25, SMG_01_F		// Vermin SMG .45 ACP
 25, SMG_02_F		// Sting 9 mm
 25, SMG_05_F		// Protector 9mm
-25, hgun_PDW2000_F	// PDW2000 9 mm
-25, rhs_weap_pp2000
+15, hgun_PDW2000_F	// PDW2000 9 mm
+30, rhs_weap_pp2000
 
 > SMGAmmo
 50, 30Rnd_45ACP_Mag_SMG_01					// Vermin SMG
@@ -163,8 +163,8 @@
 50, 30Rnd_9x21_Mag_SMG_02_Tracer_Red        // Sting, Protector
 50, 30Rnd_9x21_Mag_SMG_02_Tracer_Yellow     // Sting, Protector
 50, 30Rnd_9x21_Mag_SMG_02_Tracer_Green      // Sting, Protector
-25, rhs_mag_9x19mm_7n21_44
-25, rhs_mag_9x19mm_7n31_44
+50, rhs_mag_9x19mm_7n21_44
+50, rhs_mag_9x19mm_7n31_44
 
 > SMGAttachments
 20, optic_Holosight_smg
@@ -357,9 +357,12 @@
 12, rhs_30Rnd_545x39_AK_green
 12, rhs_30Rnd_545x39_7N6_AK
 10, rhs_30Rnd_545x39_7N10_AK
-6, rhs_30Rnd_545x39_7N22_AK //AP
-2, rhs_30Rnd_545x39_7U1_AK //subsonic
-1, rhs_20rnd_9x39mm_SP5 //asval
+6, rhs_30Rnd_545x39_7N22_AK		//AP
+2, rhs_30Rnd_545x39_7U1_AK		//subsonic
+15, rhs_30Rnd_762x39mm						// AK-12, AKM
+15, rhs_30Rnd_762x39mm_tracer                 // AK-12, AKM
+9, rhs_30Rnd_762x39mm_89                // AK-12, AKM
+1, rhs_20rnd_9x39mm_SP5		//asval
 
 //40mm flares
 2, rhs_VG40OP_white
