@@ -7,7 +7,7 @@ while {!_validPos} do
 {
 	_position = selectRandom Event_AllTownLocations;
 
-	if (!(_position isEqualTo Event_RoamingAI_lastTown) && !([_position, 800] call ExileClient_util_world_isTraderZoneInRange) && (_position distance _debug > 600)) then
+	if (!([_position, 800] call ExileClient_util_world_isTraderZoneInRange) && (_position distance _debug > 600)) then
 	{
 		_validPos = true;
 	};	

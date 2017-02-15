@@ -8,9 +8,6 @@ _zombies =
 
 _chance = 75;
 
-if (ExileReborn_playerIsWounded) then {_chance = _chance + 25;};
-if (ExileReborn_playerIsInfected) then {_chance = _chance + 40;};	
-
 if (_chance >= random 100) then
 {
 	_buildings = player nearObjects ["House", 300];

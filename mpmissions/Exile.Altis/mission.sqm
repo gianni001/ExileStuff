@@ -25,6 +25,7 @@ class EditorData
 binarizationWanted=0;
 addons[]=
 {
+	"a3_characters_f",
 	"exile_client",
 	"rhsusf_c_troops",
 	"rhsusf_c_markvsoc",
