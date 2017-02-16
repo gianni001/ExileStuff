@@ -37,7 +37,7 @@ passwordAdmin = "gianni001";
 
 
 /* "_OPEN_ADMIN_MENU_KEY": Key to open the menu (google DIK_KeyCodes (0x3B is F1))   */
-OPEN_ADMIN_MENU_KEY = 0xD1;
+OPEN_ADMIN_MENU_KEY = 0xD2;
 HIDE_FROM_PLAYERS = "false";				/* So no normal can see it :)! */
 announce_adminstate_changed = "false";	/* whenever you type !admin as an admin it will announce that you logged out or in to all players on the server! */
 use_html_load_on_adminmenu = "true";		/* default and recommended is "true". infiSTAR updates and news are announced in the top right corner when you open the AdminMenu if this is "true"! */
@@ -414,10 +414,10 @@ VCT = 300;	/* if "DayNightVote = "true";" - Time (in seconds) to wait until nex 
 
 
 /* Allow players to type !pee to start peeing */
-allowPee = "true";
+allowPee = "false";
 
 /* Enable jumping instead of GetOver function (infiSTAR jumping is a custom jump animation :P) */
-enableJump = "true";
+enableJump = "false";
 
 
 
@@ -463,7 +463,7 @@ experimental_dupe_check = "true";
 /*
 	re-assigning "InventoryOpened" eventhandler to stop glitch open a locked safe
 */
-stopSafeGlitchAndCorpseDupe = "true";
+stopSafeGlitchAndCorpseDupe = "false";
 
 
 /*
