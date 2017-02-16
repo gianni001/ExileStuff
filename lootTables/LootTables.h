@@ -214,7 +214,151 @@
 2, Bipods
 //1, Explosives
 
-//Thought - split the above into two separate groups, militaryAFRF and militaryUSAF?
+///////////////////////////////////////////////////////////////////////////////
+// Military (Tan) USAF ITEMS ONLY
+///////////////////////////////////////////////////////////////////////////////
+> MilitaryTan
+35, Trash
+3, CivilianItems
+2, GuerillaItems
+//2, HEGrenades
+//1, UGLFlares
+//1, UGLSmokes
+1, HandGrenades
+1, SmokeGrenades
+2, Restraints
+2, MedicalItems
+4, GuerillaClothing
+//5, MilitaryClothing
+4, GuerillaBackpacks
+//5, MilitaryBackpacks
+3, GuerillaVests
+//4, MilitaryVests
+//1, DLCVests
+3, GuerillaHeadgear
+//3, MilitaryHeadgear
+1, Rebreathers
+4, MilitaryLow
+//8, RiflesAFRF
+//6, RifleAmmoAFRF
+10, RiflesUSAF
+7, RifleAmmoUSAF
+//3, AttachmentsAFRF
+4, AttachmentsUSAF
+//1, LMGAFRF
+//2, LMGAmmoAFRF
+2, LMGUSAF
+3, LMGAmmoUSAF
+//1, SnipersAFRF
+//2, SniperAmmoAFRF
+//1, SniperAttachmentsAFRF
+3, SMG
+2, SMGAmmo
+4, Pistols
+2, PistolAmmo
+2, Bipods
+2, MilitaryUSAFmid
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Military (Green) AFRF items only
+///////////////////////////////////////////////////////////////////////////////
+> MilitaryGreen
+35, Trash
+3, CivilianItems
+2, ShotgunAmmo
+1, CivilianAmmo
+2, GuerillaItems
+//2, HEGrenades
+//1, UGLFlares
+//1, UGLSmokes
+1, HandGrenades
+1, SmokeGrenades
+2, Restraints
+2, MedicalItems
+4, GuerillaClothing
+//5, MilitaryClothing
+4, GuerillaBackpacks
+//5, MilitaryBackpacks
+3, GuerillaVests
+//4, MilitaryVests
+//1, DLCVests
+3, GuerillaHeadgear
+//3, MilitaryHeadgear
+1, Rebreathers
+4, MilitaryLow
+10, RiflesAFRF
+7, RifleAmmoAFRF
+//8, RiflesUSAF
+//6, RifleAmmoUSAF
+3, AttachmentsAFRF
+//3, AttachmentsUSAF
+2, LMGAFRF
+3, LMGAmmoAFRF
+//1, LMGUSAF
+//2, LMGAmmoUSAF
+1, SnipersAFRF
+2, SniperAmmoAFRF
+1, SniperAttachmentsAFRF
+3, SMG
+2, SMGAmmo
+4, Pistols
+2, PistolAmmo
+2, Bipods
+2, MilitaryAFRFmid
+
+///////////////////////////////////////////////////////////////////////////////
+// Airfield
+///////////////////////////////////////////////////////////////////////////////
+> Airfield
+17, Trash
+3, CivilianItems
+4, GuerillaItems
+//2, HEGrenades
+//1, UGLFlares
+//1, UGLSmokes
+4, HandGrenades
+1, SmokeGrenades
+1, Restraints
+6, MedicalItems
+3, GuerillaClothing
+//5, MilitaryClothing
+2, GuerillaBackpacks
+//5, MilitaryBackpacks
+1, GuerillaVests
+//4, MilitaryVests
+//1, DLCVests
+2, GuerillaHeadgear
+//3, MilitaryHeadgear
+1, Rebreathers
+7, MilitaryLow
+14, RiflesAFRF
+8, RifleAmmoAFRF
+14, RiflesUSAF
+8, RifleAmmoUSAF
+5, AttachmentsAFRF
+5, AttachmentsUSAF
+3, LMGAFRF
+3, LMGAmmoAFRF
+3, LMGUSAF
+3, LMGAmmoUSAF
+2, SnipersAFRF
+2, SnipersUSAF
+2, SniperAmmoAFRF
+2, SniperAmmoUSAF
+2, SniperAttachmentsAFRF
+2, SniperAttachmentsUSAF
+2, SMG
+1, SMGAmmo
+1, Pistols
+1, PistolAmmo
+3, Bipods
+5, MilitaryAFRFmid
+1, MilitaryAFRFhigh
+5, MilitaryUSAFmid
+1, MilitaryUSAFhigh
+2, RoadFlares
+//1, Explosives
 
 ///////////////////////////////////////////////////////////////////////////////
 // Hospital, Medevac etc. (Does not spawn on Altis!)
