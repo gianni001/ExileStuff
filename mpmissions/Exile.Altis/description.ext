@@ -66,7 +66,7 @@ showHUD[] =
 
 #include "config.cpp"
 #include "sounds.hpp"
-
+#include "infiSTAR_AdminMenu.hpp"
 class CfgRemoteExec
 {
     class Functions
