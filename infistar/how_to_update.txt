@@ -1,0 +1,14 @@
+1. Open Lizenzvereinbarung.txt
+2. It will say - licensed for: EXMAIL@EMAIL.xxx
+3. Go to http://update.infiSTAR.de
+4. Log in using Steam API (if you logged in before, always use the same Steam info)
+5. insert THAT email from 1. and 2.
+4. Missing your Secret Key? Leave the field blank and press download with your Email inserted only. It will mail you your Secret Key (look into spam/junk folder)!
+5. Once you have done that, you get your files downloaded as .zip
+
+6. Replace the BE Filters or at least diffmerge them using a program like "winmerge" so you can see if I made important changes.
+	Help and information for Battleye Filters can be found in the "readme.txt"
+	
+7. Make sure you also replace files like "infiSTAR_Exile_AdminMenu.hpp" and "CfgRemoteExec.hpp"
+8. Obviously replace the files from "@infiSTAR_Exile\addons\a3_infiSTAR_Exile"
+9. make sure you followed/read the readme ! ! !
