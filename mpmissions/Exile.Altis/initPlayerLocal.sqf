@@ -10,4 +10,4 @@ setViewDistance 1500;
 
 [] execVM "Client_scriptsAndFunctions\initClient.sqf";
 [] execVM "addons\blowout\module\blowout_client.sqf";
-[] execVM "statusIcons\statusIcons.sqf";
+//[] execVM "statusIcons\statusIcons.sqf";

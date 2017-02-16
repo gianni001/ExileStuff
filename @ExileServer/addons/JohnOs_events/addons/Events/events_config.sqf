@@ -158,7 +158,7 @@ _fuelStations = nearestObjects [[0,0,0], ['Land_fs_feed_F','Land_FuelStation_Fee
 	_x enableSimulationGlobal false;
 } forEach _fuelStations;
 
-// Make the map look damaged
+// Make the map look damage
 
 ExileReborn_allMapBuildings = [0,0,0] nearObjects ["House", 100000];
 {

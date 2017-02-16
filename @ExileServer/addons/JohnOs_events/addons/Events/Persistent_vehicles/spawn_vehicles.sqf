@@ -255,3 +255,21 @@ waitUntil
 	"ExileServer - Finished spawning world vehicles" call ExileServer_util_log;
 	_scriptComplete
 };
+
+{
+	private ["_vehicle","_magazines"];
+
+	_vehicle = _x;
+	_magazines = [];
+
+	{
+		_magazines pushBack [(_x select 0),(_x select 1)];
+	} forEach magazinesAllTurrets _vehicle;
+
+	{
+		_vehicle removeMagazinesTurret [(_x select 0),(_x select 1)];
+	} forEach _magazines;	
+
+} forEach vehicles;
+
+"Cleared ammo from all spawned vehicles" call ExileServer_util_log;

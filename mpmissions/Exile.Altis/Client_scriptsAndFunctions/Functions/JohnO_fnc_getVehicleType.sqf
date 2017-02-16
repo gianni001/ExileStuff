@@ -5,7 +5,9 @@ _vehicle = _this select 0;
 _eightWheels =
 [
 	"Exile_Car_HEMMT",
-	"B_Truck_01_Repair_F"
+	"B_Truck_01_Repair_F",
+	"rhs_btr60_msv",
+	"rhs_btr70_msv"
 ];
 
 _sixWheels =
@@ -18,7 +20,9 @@ _sixWheels =
 	"Exile_Car_V3S_Covered",
 	"Exile_Car_Tempest",
 	"Exile_Car_Zamak",
-	"I_Truck_02_box_F"
+	"I_Truck_02_box_F",
+	"rhsusf_M1232_usarmy_wd"
+
 ];
 
 if (typeOf _vehicle in _eightWheels) then
