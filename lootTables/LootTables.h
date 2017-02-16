@@ -78,7 +78,7 @@
 20, CivilianClothing
 1, MilitaryLow
 11, CivilianBackpacks
-5, CivilianVests
+2, CivilianVests
 20, CivilianHeadgear
 10, CivilianItems
 1, Restraints
@@ -105,7 +105,7 @@
 3, SMGAttachments
 20, CivilianClothing
 11, CivilianBackpacks
-5, CivilianVests
+4, CivilianVests
 3, MilitaryLow
 20, CivilianHeadgear
 10, CivilianItems
