@@ -68,12 +68,11 @@ _vehicleArray =
 	["rhsusf_m998_w_s_4dr",1,[],true],
 	["rhsusf_M1083A1P2_d_fmtv_usarmy",1,[],true],
 	["rhsusf_M1078A1P2_d_open_fmtv_usarmy",1,[],true],
-	["rhsusf_m113d_usarmy_unarmed",1,[],true],
-	["rhsusf_m113_usarmy_unarmed",1,[],true],
-	["rhsusf_M1232_usarmy_d",1,[],true],	//RG-33l MRAP  	//Use custom pos
-	["rhsusf_M1232_usarmy_wd",1,[],true],	//RG-33l MRAP 	//Use custom pos
+	["rhsusf_m113d_usarmy_unarmed",1,[[20078.2,6735.33,0],[14221.6,21232.7,0]],false],
+	["rhsusf_m113_usarmy_unarmed",1,[[14268.7,16211,0],[17396.6,13152.5,0],[25304.1,21792.1,0]],false],
+	//["rhsusf_M1232_usarmy_d",1,[],true],	//RG-33l MRAP  	//Use custom pos
+	["rhsusf_M1232_usarmy_wd",1,[[10195.8,15905.9,0],[6250.05,16862,0]],false],	//RG-33l MRAP 	//Use custom pos
 	
-
 	
 	
 	//RHS - AFRF
@@ -81,7 +80,7 @@ _vehicleArray =
 	["rhs_uaz_vdv",1,[],true],
 	["rhs_uaz_open_MSV_01",1,[],true],
 	["rhs_tigr_3camo_msv",1,[],true],
-	["rhs_tigr_m_vdv",1,[],true],
+	["rhs_tigr_m_vdv",1,[[18509.7,10899.6,0],[13835,19878.4,0],[3906.45,17444.5,0]],false],
 	["rhs_kamaz5350_open_vdv",1,[],true],
 	["rhs_kamaz5350_vdv",1,[],true],
 	["RHS_Ural_Open_VDV_01",1,[],true],
@@ -89,8 +88,8 @@ _vehicleArray =
 
 	
 	//Armed
-	["rhs_btr60_msv",1,[],true], 	//Use custom pos
-	["rhs_btr70_msv",1,[],true], 	//Use custom pos
+	["rhs_btr60_msv",1,[[12282.4,8930.5,0],[18080.2,19178.9,0]],false], 	//Use custom pos
+	["rhs_btr70_msv",1,[[20911,19314.1,0],[23031.3,7258.71,0]],false], 	//Use custom pos
 
 	
 	// Apex stuff
