@@ -2,51 +2,43 @@ private ["_aliveUnits","_nearPlayers","_nearVehicles","_nearPlayers","_timeStamp
 
 _aliveUnits = Event_ALLAI_SimulatedUnits; 
 
+Event_simulationManager_hiddenObjectsCount = 0;
 {	
-
-	_nearVehicles = getpos _x nearEntities [["Air","Car",'Exile_Unit_Player'], Event_SimulationManager_SimulateRange];
-	_nearPlayers = false;
-	{
-		private "_x";
-		if (isPlayer _x) then
+	if !(isPlayer _x) then
+	{	
+		if ([getPos _x,800] call ExileClient_util_world_isAlivePlayerInRange) then
 		{
-			_nearPlayers = true;
+			_x enableSimulationGlobal true;
+			_x hideObjectGlobal false;
+			_aliveUnits = _aliveUnits - [_x]; 
+		}
+		else
+		{
+			_x enableSimulationGlobal false;
+			_x hideObjectGlobal true;
+			Event_simulationManager_hiddenObjectsCount = Event_simulationManager_hiddenObjectsCount + 1;
+		};
+	};	
 
-		}; 	
-	} forEach _nearVehicles;
+} forEach allUnits;
 
-	if (_nearPlayers) then
-	{
-		_x enableSimulationGlobal true;
-		_x hideObjectGlobal false;
-		_aliveUnits = _aliveUnits - [_x]; 
-	}
-	else
-	{
-		_x enableSimulationGlobal false;
-		_x hideObjectGlobal true;
-	};
-
-} forEach _aliveUnits;
+if (Event_extraDebugLogging) then
+{
+	if (Event_simulationManager_hiddenObjectsCount > 0) then
+	{	
+		format ["[SIMULATION MANAGER] Simulation manager has hidden %1 entities",Event_simulationManager_hiddenObjectsCount] call ExileServer_util_log;
+	};	
+};	
 
 /****************** Deletion of units added to the cleanup manager *************************/
 
 Event_simulationManager_cleanUpCount = 0;
 {
 	_timeStamp = _x getVariable "JohnO_RoaminAI";
-	_nearVehicles_AI = getpos _x nearEntities [["Air","Car",'Exile_Unit_Player'], 100];
-	_nearPlayers_AI = false;
-	{
-		private "_x";
-		if (isPlayer _x) then
-		{
-			_nearPlayers_AI = true;
-		}; 	
-	} forEach _nearVehicles_AI;
-
+	
 	if !(isNil "_timeStamp") then
 	{
-		if ((time >= _timeStamp) && !(_nearPlayers_AI)) then
+		if ((time >= _timeStamp) && !([getPos _x,800] call ExileClient_util_world_isAlivePlayerInRange)) then
 		{
 			deleteVehicle _x;
 			Event_ALLAI_SimulatedUnits = Event_ALLAI_SimulatedUnits - [_x];
@@ -75,16 +67,7 @@ if (Event_extraDebugLogging) then
 	{
 		if (_isMarker) then
 		{	
-			_nearVehicles_object = getMarkerPos _object nearEntities [["Air","Car",'Exile_Unit_Player'], 100];
-			_nearPlayers_object = false;
-			{
-				private "_x";
-				if (isPlayer _x) then
-				{
-					_nearPlayers_object = true;
-				}; 	
-			} forEach _nearVehicles_object;
-			if !(_nearPlayers_object) then
+			if !([getMarkerPos _object,800] call ExileClient_util_world_isAlivePlayerInRange) then
 			{	
 				deleteMarker _object;
 				Event_Cleanup_objectArray deleteAt _forEachIndex;
@@ -92,22 +75,12 @@ if (Event_extraDebugLogging) then
 		}
 		else
 		{
-			_nearVehicles_object = getPos _object nearEntities [["Air","Car",'Exile_Unit_Player'], 100];
-			_nearPlayers_object = false;
-			{
-				private "_x";
-				if (isPlayer _x) then
-				{
-					_nearPlayers_object = true;
-
-				}; 	
-			} forEach _nearVehicles_object;
-			if !(_nearPlayers_object) then
+			if !([getPos _object,800] call ExileClient_util_world_isAlivePlayerInRange) then
 			{	
 				deleteVehicle _object;
 				Event_Cleanup_objectArray deleteAt _forEachIndex;
 			};	
 		};
 	};	
-
+	
 } forEach Event_Cleanup_objectArray;

@@ -3345,6 +3345,7 @@ class CfgInteractionMenus
 
 		class Actions
 		{
+			/*
 			class ScanLock: ExileAbstractAction
 			{
 				title = "Scan Lock";
@@ -3375,7 +3376,7 @@ class CfgInteractionMenus
 				condition = "((locked ExileClientInteractionObject) isEqualTo 2) && ((locked ExileClientInteractionObject) != 1)";
 				action = "['HotwireVehicle', _this select 0] call ExileClient_action_execute";
 			};
-
+			*/
 			// Repairs a vehicle to 100%. Requires Duckttape
 			/*
 			class Repair: ExileAbstractAction
@@ -3718,6 +3719,7 @@ class CfgInteractionMenus
 		class Actions
 		{
 			// Locks a vehicle
+			/*
 			class Lock: ExileAbstractAction
 			{
 				title = "Lock";
@@ -3740,7 +3742,7 @@ class CfgInteractionMenus
 				condition = "((locked ExileClientInteractionObject) isEqualTo 2) && ((locked ExileClientInteractionObject) != 1)";
 				action = "['HotwireVehicle', _this select 0] call ExileClient_action_execute";
 			};
-
+			*/
 			// Repairs a vehicle to 100%. Requires Duckttape
 			class Repair: ExileAbstractAction
 			{
